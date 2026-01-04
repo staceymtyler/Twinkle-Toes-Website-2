@@ -1,11 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Twinkle Toes Christmas Lights</title>
+  <style>
+    :root{
+      --bg1:#063a16;
+      --bg2:#0b5d1e;
+      --card:rgba(255,255,255,.10);
+      --border:rgba(255,255,255,.18);
+      --text:#ffffff;
+    }
+
+    body{
+      margin:0;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background: radial-gradient(1200px 600px at 20% 10%, #0f7a2a 0%, var(--bg2) 35%, var(--bg1) 100%);
+      color:var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      text-align:center;
+      padding:24px;
+    }
+
+    .card{
+      width:min(860px, 100%);
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:22px;
+      padding:36px 22px;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 18px 50px rgba(0,0,0,.25);
+    }
+
+    h1{
+      margin:0 0 10px;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      letter-spacing:.2px;
+    }
+
+    .sub{
+      margin:0 auto 22px;
+      font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+      line-height:1.5;
+      opacity:.95;
+      max-width: 48ch;
+    }
+
+    .row{
+      display:flex;
+      gap:12px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin-top:18px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:14px 18px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.22);
+      background: rgba(255,255,255,.14);
+      color:#fff;
+      text-decoration:none;
+      font-weight:700;
+      min-width: 180px;
+    }
+    .btn:hover{ background: rgba(255,255,255,.20); }
+
+    .btn.primary{
+      background: #ffffff;
+      color:#0b5d1e;
+      border-color: #ffffff;
+    }
+    .btn.primary:hover{ filter: brightness(.95); }
+
+    .phone{
+      margin-top:18px;
+      font-size: clamp(1.3rem, 3vw, 1.9rem);
+      font-weight: 800;
+      letter-spacing:.8px;
+    }
+    .phone a{ color:#fff; text-decoration:none; }
+    .phone a:hover{ text-decoration:underline; }
+
+    .fine{
+      margin-top:18px;
+      opacity:.85;
+      font-size:.98rem;
+    }
+
+    /* tiny sparkle dots */
+    .sparkles{
+      margin:14px 0 0;
+      font-size: 18px;
+      opacity:.95;
+      letter-spacing: 4px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Twinkle Toes Christmas Lights</h1>
-  <p>Website coming soon.</p>
+  <main class="card">
+    <h1>Twinkle Toes Christmas Lights</h1>
+    <p class="sub">
+      Professional Christmas light installation in Chillicothe & surrounding areas.
+      Clean lines. Safe installs. No ladder drama.
+    </p>
+
+    <div class="row">
+      <a class="btn primary" href="#quote">Request a Quote</a>
+      <a class="btn" href="tel:7404669600">Call Now</a>
+    </div>
+
+    <div class="phone">📞 <a href="tel:7404669600">740-466-9600</a></div>
+    <div class="sparkles">✦ ✦ ✦</div>
+
+    <p class="fine" id="quote">
+      Quote form coming next. For now, call or text and we’ll get you scheduled.
+    </p>
+  </main>
 </body>
 </html>
+
